@@ -19,32 +19,13 @@
     <div class="container">
       <h2>Striped Rows</h2>
       <p>The .table-striped class adds zebra-stripes to a table:</p>
-      <table class="table table-striped">
+      <table class="table table-striped" id="train-table">
         <thead>
           <tr>
             <th>Current Train Schedule</th>
           </tr>
         </thead>
         <tbody>
-      <tr>
-        <td>Train Name</td>
-        <td>Destination</td>
-        <td>Frequency</td>
-        <td>Next Arrival</td>
-        <td>Minutes Away</td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
     </tbody>
   </table>
 </div>
@@ -54,8 +35,19 @@
   <input type="text" class="form-control" id="usr">
 </div>
 <div class="form-group">
-  <label for="pwd">Password:</label>
-  <input type="password" class="form-control" id="pwd">
+  <label for="dest">Destination:</label>
+  <input type="text" class="form-control" id="dest">
+</div>
+<div class="form-group">
+  <label for="train">First Train Time (HH:mm-military time)</label>
+  <input type="text" class="form-control" id="train">
+</div>
+<div class="form-group">
+  <label for="freq">Frequency (min):</label>
+  <input type="text" class="form-control" id="freq">
+</div>
+<div class="form-group">
+  <input type="submit" value="Submit"  id="submit">
 </div>
 
 <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js" charset="utf-8"></script> <script src="https://code.jquery.com/jquery-3.2.1.min.js" charset="utf-8"></script>

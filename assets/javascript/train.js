@@ -7,6 +7,7 @@
     storageBucket: "",
     messagingSenderId: "193895585409"
   };
+  
   firebase.initializeApp(config);
 
   //database
@@ -78,7 +79,6 @@ var makePretty= moment.unix(getTrain).format("HH:mm");
 
 //add train data
 
-$("#train-table > tbody").append("<tr><td>"+ getUsr "<tr><td>"
-+ getTrain + "<tr><td>" + getDest + "<tr><td>" + getFreq "<tr><td>");
+$("#train-table > tbody").append("<tr><td>"+ getUsr + "<tr><td>" + getTrain + "<tr><td>" + getDest + "<tr><td>" + getFreq + "<tr><td>");
 
 });

@@ -1,6 +1,6 @@
-$(document).ready(function() {
 
 // Initialize Firebase
+//database
 var config = {
   apiKey: "AIzaSyChEe-dt9TYZhj3AJUYSqcw_jjOpglc1Co",
   authDomain: "train-this.firebaseapp.com",
@@ -10,14 +10,14 @@ var config = {
   messagingSenderId: "193895585409"
 };
 firebase.initializeApp(config);
+var trainThis= firebase.database();
 
-  //database
-  var trainThis= firebase.database();
+$(document).ready(function() {
+  event.preventDefault();
 
   //button
   $("#add-train-btn").on("click",function() {
 
-event.preventDefault();
 
 //grab input
 

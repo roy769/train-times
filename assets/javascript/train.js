@@ -22,8 +22,8 @@ event.preventDefault();
 //grab input
 
 var trainName = $("#train-name-input").val().trim();
-var destination = $("#destination-input").val.trim();
-var firstTrainUnix = $("#first-train-input").val.trim();
+var destination = $("#destination-input").val().trim();
+var firstTrainUnix = moment($("#first-train-input").val().trim(), "HH:mm").subtract(10, "years").format("X");
 var frequency = $("#frequency-input").val().trim();
 
 

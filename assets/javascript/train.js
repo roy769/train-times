@@ -1,3 +1,5 @@
+$(document).ready(function() {
+
 // Initialize Firebase
 var config = {
   apiKey: "AIzaSyChEe-dt9TYZhj3AJUYSqcw_jjOpglc1Co",
@@ -13,7 +15,7 @@ firebase.initializeApp(config);
   var trainThis= firebase.database();
 
   //button
-  $("#add-train-btn").on("click",function(event) {
+  $("#add-train-btn").on("click",function() {
 
 event.preventDefault();
 
@@ -65,7 +67,7 @@ trainThis.ref().on("child_added",function(childSnapshot, prevChildKey) {
 
 //store in a variable
 
-var tname = childSnapshot.val().name;
+var tName = childSnapshot.val().name;
 var tDestination = childSnapshot.val().destination;
 var tFrequency = childSnapshot.val().frequency;
 var tFirstTrain = childSnapshot.val().firsTrain;
@@ -89,5 +91,6 @@ console.log(X);
 
 //add train data
 
-$("#train-table > tbody").append("<tr><td>"+ tName + "<tr><td>" + tDestination + "<tr><td>" + tFrequency + "<tr><td>" + getFreq + "<tr><td>" + "<tr><td>" + tArrival + "<tr><td>" + tMinutes  "<tr><td>");
+$("#train-table > tbody").append("<tr><td>"+ tName + "</td><td>" + tDestination + "</td><td>" + tFrequency + "</td><td>" + getFreq + "</td><td>" + "</td><td>" + tArrival + "</td><td>" + tMinutes + "<td><tr>");
+  });
 });
